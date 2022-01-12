@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>kr.co</groupId>
-	<artifactId>jhjsoft</artifactId>
+	<artifactId>teamproject</artifactId>
 	<name>spring_mvc</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
@@ -14,9 +14,96 @@
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
+
 	<dependencies>
+		<!-- 복호화가 불가능한 암호화를 위한 라이브러리 -->
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.15</version>
+		</dependency>
+
+		<!-- 파일 업로드 처리를 위한 의존성 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+		<!-- 어노테이션을 이용한 유효성 검사를 위한 의존성 -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>2.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.9.Final</version>
+		</dependency>
+
+		<!-- XML 출력을 위한 라이브러리 의존성 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.2.11</version>
+		</dependency>
 
 
+		<!-- JSON 출력을 위한 의존성 -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.7</version>
+		</dependency>
+
+		<!-- PDF 출력을 위한 의존성 -->
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+
+		<!-- Excel 파일을 읽기 위한 의존성 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.13</version>
+		</dependency>
+
+		<!-- Excel 출력을 위한 의존성 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.16</version>
+		</dependency>
+
+		<!-- Hibernate 사용을 위한 의존성 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.4.2.Final</version>
+		</dependency>
 
 		<!-- 스프링에서 ORM 프레임워크를 사용하기 위한 의존성 -->
 		<dependency>
@@ -24,6 +111,7 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+
 
 		<!-- Spring Test 라이브러리 -->
 		<dependency>
@@ -38,6 +126,44 @@
 			<version>1.18.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- MySQL 을 사용하기 위한 의존성 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.21</version>
+		</dependency>
+
+		<!-- Spring 에서 데이터베이스 사용하기 위한 의존성 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<!-- MyBatis 사용을 위한 의존성 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.7</version>
+		</dependency>
+
+		<!-- Spring에서 MyBatis를 사용하기 위한 의존성 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>2.0.6</version>
+		</dependency>
+
+		<!-- 데이터베이스 연동할 때 자세한 로그를 확인하기 위한 라이브러리의 의존성 -->
+		<dependency>
+			<groupId>org.bgee.log4jdbc-log4j2</groupId>
+			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+			<version>1.16</version>
+		</dependency>
+
+
+
 
 		<!-- Spring -->
 		<dependency>
@@ -127,6 +253,7 @@
 			<artifactId>javax.servlet.jsp-api</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -139,44 +266,6 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>
-		<!-- Spring에서 데이터베이스 사용하기 위한 의존성 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		<!-- MyBatis 사용을 위한 의존성 -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.5.7</version>
-		</dependency>
-
-		<!-- Spring에서 MyBatis를 사용하기 위한 의존성 -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
-			<version>2.0.6</version>
-		</dependency>
-
-		<!-- 데이터베이스 연동할 때 자세한 로그를 확인하기 위한 라이브러리의 의존성 -->
-		<dependency>
-			<groupId>org.bgee.log4jdbc-log4j2</groupId>
-			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
-			<version>1.16</version>
-		</dependency>
-		<!-- tx ?>???? -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		<!-- mysql을 사용하기 위한 의존성 -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.21</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -215,13 +304,7 @@
 					<mainClass>org.test.int1.Main</mainClass>
 				</configuration>
 			</plugin>
-			<plugin>
 
-				<artifactId>maven-war-plugin</artifactId>
-
-				<version>3.2.2</version>
-
-			</plugin>
 		</plugins>
 	</build>
 </project>

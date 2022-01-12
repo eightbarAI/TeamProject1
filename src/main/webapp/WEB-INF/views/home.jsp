@@ -44,10 +44,9 @@
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="generic.html">Login / SignUp</a></li>
-				<li><a href="generic.html">Reservation List</a></li>
 				<li><a href="generic.html">Board</a></li>
-				<li><a href="elements.html">Q&A</a></li>
+				<li><a href="generic.html">Q&A</a></li>
+				<li><a href="generic.html">Review</a></li>
 			</ul>
 		</nav>
 
@@ -60,15 +59,15 @@
 						<a href="http://html5up.net">Let's do it✔</a>
 					</h1>
 				</header>
-				
+
 				<section class="tiles">
 					<article class="style1">
 						<span class="image"> <img
 							src="./resources/images/pic01.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>Tennis</h2>
+						</span> <a href="user/login">
+							<h2>Sign up/Login</h2>
 							<div class="content">
-								<p>TennisTeam</p>
+								<p>회원가입/로그인</p>
 							</div>
 						</a>
 					</article>
@@ -76,9 +75,9 @@
 						<span class="image"> <img
 							src="./resources/images/pic02.jpg" alt="" />
 						</span> <a href="generic.html">
-							<h2>Basketball</h2>
+							<h2>Reservation list</h2>
 							<div class="content">
-								<p>BasketballTeam</p>
+								<p>예약 리스트</p>
 							</div>
 						</a>
 					</article>
@@ -86,9 +85,9 @@
 						<span class="image"> <img
 							src="./resources/images/pic03.jpg" alt="" />
 						</span> <a href="generic.html">
-							<h2>Running</h2>
+							<h2>team chatting</h2>
 							<div class="content">
-								<p>RunningTeam</p>
+								<p>팀 대화방</p>
 							</div>
 						</a>
 					</article>
@@ -96,9 +95,9 @@
 						<span class="image"> <img
 							src="./resources/images/pic04.jpg" alt="" />
 						</span> <a href="generic.html">
-							<h2>Cycle</h2>
+							<h2>tennis</h2>
 							<div class="content">
-								<p>CycleTeam</p>
+								<p>Tennis Team</p>
 							</div>
 						</a>
 					</article>
@@ -107,9 +106,9 @@
 						<span class="image"> <img
 							src="./resources/images/pic05.jpg" alt="" />
 						</span> <a href="generic.html">
-							<h2>name1</h2>
+							<h2>Basketball</h2>
 							<div class="content">
-								<p>name1</p>
+								<p>Basketball Team</p>
 							</div>
 						</a>
 					</article>
@@ -118,9 +117,9 @@
 						<span class="image"> <img
 							src="./resources/images/pic06.jpg" alt="" />
 						</span> <a href="generic.html">
-							<h2>name2</h2>
+							<h2>Running/Cycle</h2>
 							<div class="content">
-								<p>name2</p>
+								<p>Running Team/Cycle Team</p>
 							</div>
 						</a>
 					</article>
